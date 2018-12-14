@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
-module.explore = mongoose.connect('mongodb://localhost/mymoney')
+module.explore = mongoose.connect('mongodb://localhost/mymoney', 
+{useMongoClient: true})
 
 mongoose.Error.messages.general.required = "o atributo '{PATH}' é obrigatório "
 mongoose.Error.messages.Number.min = 
